@@ -2,6 +2,9 @@
 .vs/
 *VC.db
 
+#UE4 Starter Content
+BuildingEscape/Content/StarterContent
+
 # Compiled Object files
 *.slo
 *.lo
