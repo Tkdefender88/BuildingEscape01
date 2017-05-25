@@ -20,7 +20,14 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	// Find owning actor
+	AActor* Owner = GetOwner();
+
+	//Create rotator
+	FRotator rotation = FRotator(0.0f, -70.0, 0.0f);
+
+	//Set the door rotation
+	Owner->SetActorRotation(rotation);
 	
 }
 
