@@ -27,4 +27,14 @@ private:
 
 	//How far the player can reach in cm
 	float Reach = 100.f;
+
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	UInputComponent* InputComponent = nullptr;
+
+	//Ray-cast and grab items within reach
+	void Grab();
+
+	//Release what has been grabbed.
+	void Release();
 };
