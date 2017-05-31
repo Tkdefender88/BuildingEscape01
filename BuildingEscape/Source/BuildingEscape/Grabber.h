@@ -32,9 +32,18 @@ private:
 
 	UInputComponent* InputComponent = nullptr;
 
+	//Find Physics
+	void FindPhysicsHandle();
+
+	//Setup Attached input component
+	void SetupInputComponent();
+
 	//Ray-cast and grab items within reach
 	void Grab();
 
 	//Release what has been grabbed.
 	void Release();
+
+	// Return hit for first physics body in range
+	const FHitResult GetFirstPhysicsBodyInRange();
 };
