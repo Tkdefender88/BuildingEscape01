@@ -60,6 +60,7 @@ void UGrabber::Grab() {
 }
 
 void UGrabber::Release() {
+	if (!PhysicsHandle) { return; }
 	PhysicsHandle->ReleaseComponent();
 }
 
@@ -82,6 +83,7 @@ const FHitResult UGrabber::GetFirstPhysicsBodyInRange() {
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (!PhysicsHandle) { return; }
 	//if physics handle is attached
 	if (PhysicsHandle->GrabbedComponent) {
 		//move object that we hold
