@@ -39,8 +39,12 @@ private:
 
 	float LastDoorOpenTime;
 
-	AActor* ActorThatOpens;
 	AActor* Owner;
+
+	float GetTotalMassOnPlate();
+
+	UPROPERTY(EditAnywhere)
+	float PressurePlateTriggerWeight = 65.f;
 };
 
 
